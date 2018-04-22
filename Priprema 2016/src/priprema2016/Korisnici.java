@@ -78,14 +78,28 @@ public class Korisnici {
 		}
 		
 		//sortiraj liste po filteru
-		if( f == 1 ){
-			ret.sort(Comparator.comparing(Korisnik::getKredit));
+		if( f == 1 || f == 2){
+			//rastuci sort
+			Collections.sort(ret, new Comparator<Korisnik>() {
+				@Override
+				public int compare(Korisnik o1, Korisnik o2) {
+					if (o1.getKredit() == o2.getKredit())
+						return 0;
+					else if (o1.getKredit() > o2.getKredit())
+						return 1;
+					else
+						return -1;
+				}
+			});
+			
+			if( f == 1 ){
+				Collections.reverse(ret);
+			}
 		}
 		
-		if( f == 2 ){
-			ret.sort(Comparator.comparing(Korisnik::getKredit));
-			Collections.reverse(ret);
-		}
+		
+		//drugi nacin sorta(Od Java 8) - rastuce: ret.sort(Comparator.comparing(Korisnik::getKredit));
+			
 		
 		return ret;
 	}
