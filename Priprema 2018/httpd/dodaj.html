@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dodaj novi klub</title>
+</head>
+<body>	
+	<form action = "http://localhost:8080/dodaj">
+	<table style = "border:1px solid black; padding:10px">
+		<tr>
+			<td colspan = "2" style = "text-align:center"><h1 style = "color:red"> Unos novog kluba </h1></td>
+		</tr>
+		<tr>
+			<td> Naziv </td>
+			<td> <input type="text" name="naziv" /> </td>
+		</tr>
+		<tr>
+			<td> Grad </td>
+			<td>  
+				<select name="grad">
+			      <option value = "Novi Sad">Novi Sad</option>
+			      <option value = "Ruma">Ruma</option>
+			      <option value = "Ruski Krstur">Ruski Krstur</option>
+			      <option value = "Vrbas">Vrbas</option>
+			      <option value = "Bačka Palanka">Bačka Palanka</option>
+			      <option value = "Melenci">Melenci</option>
+	    		</select>
+    		 </td>
+		</tr>
+		<tr>
+			<td> Aktivan </td>
+			<td> <input type = "checkbox" name = "aktivan" /> </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td> <input type = "submit" value = "Dodaj" /> </td>			
+		</tr>
+	</table>
+	</form>	
+</body>
+</html>
