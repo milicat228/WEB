@@ -122,8 +122,12 @@ public class httpd {
 					sezona = true;
 				generator.rezultatFiltera(ponude, ps, taksa, sezona);
 			}
+			else if(zahtev.equals("")){
+				generator.glavnaStranaHTML(ponude.getPonude(), ps);			
+			}
 			else{
-				generator.glavnaStranaHTML(ponude.getPonude(), ps);
+				ps.print("HTTP/1.0 404 File not found\r\n");
+				ps.print("Content-type: text/html; charset=UTF-8\r\n\r\n<b>404 Not found.");
 			}
 			
 		}

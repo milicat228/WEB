@@ -88,7 +88,8 @@ public class HTMLGenerator {
 		//link ka stranici za dodavanje (pisalo je bas link ka statickom html)
 		Path putanja = Paths.get("");
 		String dodaj = putanja.toAbsolutePath() + "/dodaj.html";
-		ps.println("<a href=\"" + dodaj + "\"> Dodaj novu ponudu </a>");
+		dodaj = dodaj.replace("\\", "/");
+		ps.println("<a href=\"file:///" + dodaj + "\"> Dodaj novu ponudu </a>");
 		ps.println("</body>");
 		ps.println("</html>");
 	}
@@ -127,6 +128,9 @@ public class HTMLGenerator {
 			else{
 				naslov = "Ponude van sezone bez boravisne takse";				
 			}
+			
+			//generisanje glave
+			head(ps);
 			
 			//generisanje tabele
 			tabelaHTML(filtrirane, ps, false, naslov);
