@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/servlets/AddAccountServlet.java=UTF-8
+encoding//src/servlets/AddMoneyToAccount.java=UTF-8
+encoding//src/servlets/LoginServlet.java=UTF-8

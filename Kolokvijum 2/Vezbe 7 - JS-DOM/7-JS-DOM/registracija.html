@@ -1,0 +1,59 @@
+<html>
+<head>	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="stilovi.css" />
+    <script src="registracija.js"></script>
+</head>
+<body>
+    <h1>Produženje registracije</h1>
+    <p>Na ovoj stranici možete da obavite produženje registracije vašeg automobila.<br/>
+Molimo vas da popunite sledeći formular.
+</p>
+
+<form action="registrovani_korisnici.html" method="get" onsubmit="return validacija(this)">
+    <table border="1">
+	<tr class="first">
+		<td colspan="2">Produženje registracije</td>	
+	</tr>
+	<tr>	
+		<td>Ime</td>
+	<td> <input type="text" id="ime"> </td></tr>
+	<tr>	
+		<td>Prezime</td>
+	<td><input type="text" id="prezime"> </td></tr>
+	<tr>	
+		<td>JMBG</td>
+	<td><input type="text" id="jmbg"> </td></tr>
+	<tr>	
+		<td>Marka vozila</td>
+	<td><select id="marka">
+    		<option value="1"></option>
+    		<option value="2">Mercedes</option>
+    		<option value="3">Peugeot</option>
+    		<option value="4">Renault</option>
+	</select> </td></tr>
+	<tr>	
+		<td>Tip vozila</td>
+	<td><select id="tip" onchange="proveraTipa(this)">
+    		<option value="1"></option>
+    		<option value="2">Motorno</option>
+    		<option value="3">Hibridno</option>
+    		<option value="4">Električno</option>
+	</select></td></tr>
+	<tr style="visibility: collapse;" id="kubikazaRed" >
+		<td>Kubikaza</td>
+		<td><input type="text" id="kubikaza" onchange="proveraKubikaze(this)"> </td>
+	</tr>
+	<tr>	
+		<td>Registracija</td>
+	<td><input type="text" id="registracija"></td></tr>
+	<tr>	
+		<td></td>
+	<td><input type="submit" name="posalji" value="Submit "> </td></tr>
+    </table>
+</form>
+<p id="menu">U kombo boksu su navedene sleće marke vozila: <i>Mercedes</i>, <i>Peugeot</i> i <i>Renault</i>!</p>    
+
+<p id="paragraf" style="color:black; visibility: collapse;"> "EKO KLASA" </p>
+</body>
+</html>
