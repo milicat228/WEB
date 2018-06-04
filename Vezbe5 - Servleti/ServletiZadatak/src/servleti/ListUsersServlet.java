@@ -51,6 +51,20 @@ public class ListUsersServlet extends HttpServlet {
 		pout.println("</head>");
 		pout.println("<body>");
 		
+		//forma za pretragu
+		pout.println("<form action=\"SearchServlet\" method=\"POST\">");
+		pout.println("<table>");
+		pout.println("<tr>");
+		pout.println("<td>");
+		pout.println("<input type=\"text\" name=\"username\"/>");
+		pout.println("</td>");
+		pout.println("<td>");
+		pout.println("<input type=\"submit\" value=\"Pretraži\" />");
+		pout.println("</td>");
+		pout.println("</tr>");
+		pout.println("</table>");
+		pout.println("</form>");
+		
 		if(korisnici.size() == 0){
 			pout.println("Nema korisnika");
 		}
