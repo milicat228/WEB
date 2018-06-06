@@ -63,10 +63,11 @@ public class AddAccountServlet extends HttpServlet {
 			request.setAttribute("err","Niste uneli broj računa.");
 			return null;
 		}
+		
 		HttpSession session = request.getSession(false);
-		User user = (User) session.getAttribute("user");
+		User user = (User) session.getAttribute("user");	
 		if(user.getAccounts().containsKey(accountNumber)){
-			request.setAttribute("err2","Račun već postoji.");
+			request.setAttribute("err","Račun već postoji.");
 			return null;
 		}
 		
